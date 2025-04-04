@@ -2,19 +2,11 @@
 
 const reverseString = (str) => [...str].reduce((rev, char) => char + rev, '')
 console.log(reverseString('Mummy'))
-// const reverseString = (str) => [...str].reduce((rev, char) => char + rev, '');
-// console.log(reverseString("punch")); // "hcnup"
 const reserved = (str) => [...str].reduce((rev, chart) => chart + rev, '')
 console.log(reserved('Femi'))
 
 let schools = reverseString('schools');
 console.log(schools); // "sloohcs"
-
-// ⿢ Find the First Non-Repeating Character
-
-const firstUniqueChar = (str) => [...str].find(char => str.indexOf(char) === str.lastIndexOf(char)) || console.log('No words found');
-console.log(firstUniqueChar("aabbcddde")); // "c"
-
 
 
 // ⿣ Check if Two Arrays are Equal (Ignoring Order)
@@ -149,6 +141,3 @@ console.log(dataReverse('Yoo!'))
 const checkWords = (array1, array2) => array1.sort().toString() === array2.sort().toString();
 console.log(checkWords([2,2,2], [2,2,2]), 'correct!') //true
 console.log(checkWords([1,2,3], [4,7,1]), 'correct!') //false
-
-const getFirstUniqueChar = (str) => [...str].find(words => str.indexOf(words) === str.lastIndexOf(words)) || console.log('No words found')
-console.log(getFirstUniqueChar("aabbcddde")); // "c"
