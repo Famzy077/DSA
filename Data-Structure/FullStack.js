@@ -1,9 +1,11 @@
 // ⿡ Reverse a String (Without .reverse())
 
-const reverseString = (str) => [...str].reduce((rev, char) => char + rev, '');
-console.log(reverseString("punch")); // "hcnup"
-const reverExample = (rever) => [...rever].reduce((ref, char) => char + ref, '');
-console.log(reverExample('I love coding'))
+const reverseString = (str) => [...str].reduce((rev, char) => char + rev, '')
+console.log(reverseString('Mummy'))
+// const reverseString = (str) => [...str].reduce((rev, char) => char + rev, '');
+// console.log(reverseString("punch")); // "hcnup"
+const reserved = (str) => [...str].reduce((rev, chart) => chart + rev, '')
+console.log(reserved('Femi'))
 
 let schools = reverseString('schools');
 console.log(schools); // "sloohcs"
@@ -46,16 +48,16 @@ console.log(areArraysEqual([1, 2, 3], [1, 2, 3]), 'The answer is true'); // true
 
 // ⿦ Fetch Data with fetch & Async/Await
 
-const fetchData = async (url) => {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.error(error, 'Error APIs could not be fetch')
-    }
-}
-fetchData('data.json')
+// const fetchData = async (url) => {
+//     try {
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         console.log(data);
+//     } catch (error) {
+//         console.error(error, 'Error APIs could not be fetch')
+//     }
+// }
+// fetchData('data.json')
 
 
 // JavaScript Set
@@ -114,3 +116,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 })
+
+// Fetch data using async try/catch
+const fetchDa = async(url) => {
+    try {
+        const res = await fetch(url);
+        const data = await res.json()
+        console.log(data);
+    } catch (error) {
+        console.error(error, 'Error occur data couldn\'t fetch');
+    }
+}
+fetchDa('data.json')
+
+// Add set method in JavaScript
+const AddSetData = new Set();
+    AddSetData.add('Yoo!');
+    AddSetData.add('I like coding');
+    AddSetData.add('Do you?')
+
+// Delete set method
+const remove = AddSetData.delete('Do you?')
+console.log(remove, 'Done removed Do you?');
+
+console.log(AddSetData)
+
+// Reverse data
+const dataReverse = (str) => [...str].reduce((rev, char) => char + rev, '')
+console.log(dataReverse('Yoo!'))
+
+// Check for words if the words is equal
+const checkWords = (array1, array2) => array1.sort().toString() === array2.sort().toString();
+console.log(checkWords([2,2,2], [2,2,2]), 'correct!') //true
+console.log(checkWords([1,2,3], [4,7,1]), 'correct!') //false
+
+const getFirstUniqueChar = (str) => [...str].find(words => str.indexOf(words) === str.lastIndexOf(words)) || console.log('No words found')
+console.log(getFirstUniqueChar("aabbcddde")); // "c"
