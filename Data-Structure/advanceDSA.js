@@ -8,6 +8,23 @@ users["Alice"] = "Designer";
 
 console.log(users["Bob"]);  // "Engineer"
 
+const names = {};
+names['Akinola'] = 'Femi';
+names['Aremu'] = 'Odu';
+names['Olaonipekun'] = 'Festus';
+console.log(names)
+
+let nameKeys = Object.keys(names);
+let nameValues = Object.values(names);
+console.log(nameKeys) // Output: ['Akinola', 'Aremu', 'Olaonipekun']
+console.log(nameValues) // Output: ['Akinola', 'Odu', 'Festus']
+
+for(let getName in names){
+    console.log(getName, names[getName])
+}
+console.log('------------------');
+
+
 // Using Map for better performance with large datasets
 let firstNonRepeatingCharacter = (str) => {
     let charCount = new Map();  // Create a map to store character frequencies
@@ -80,3 +97,59 @@ function merge(left, right) {
 }
 
 console.log(mergeSort([3, 7, 4, 1, 5, 8, 2, 6]));  // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+const items = {};
+items['Bag'] = '$12,000'
+items['Shoes'] = '$1,000';
+items['Shirt'] = '$2,000';
+items['Pants'] = '$3,000';
+
+console.log(items['Bag']) // Output: $12,000;
+
+for(let getAllItems in items){
+    let display = document.createElement('div');
+    display.innerHTML = getAllItems + ': ' + items[getAllItems];
+    document.body.appendChild(display);
+}
+
+let schools = {
+    University: 'University of Lagos',
+    College: 'Lagos State College',
+    Polytechnic: 'Lagos State Polytechnic'
+}
+
+let getSchool = Object.keys(schools);
+let getSchoolValues = Object.values(schools);
+
+for(let getSchool in schools){
+    let display = document.createElement('div');
+    display.innerHTML = getSchool + ': ' + schools[getSchool], ' okayy';
+    document.body.appendChild(display);
+}
+console.log(getSchool) // Output: ['University', 'College', 'Polytechnic']
+console.log(getSchoolValues) // Output: ['University of Lagos', 'Lagos State University', 'Lagos State Polytechnic']
+
+const students = [
+    { name: "Femi", grade: "A" },
+    { name: "Ada", grade: "B" },
+    { name: "Uche", grade: "A" },
+    { name: "Kemi", grade: "C" },
+    { name: "Tolu", grade: "B" },
+  ];
+  
+  const groupedByGrade = {};
+  
+  students.forEach(({ name, grade }) => {
+    if (!groupedByGrade[grade]) {
+      groupedByGrade[grade] = [];
+    }
+    groupedByGrade[grade].push(name);
+  });
+  
+  // Display the grouped result
+  Object.entries(groupedByGrade).forEach(([grade, names]) => {
+    const display = document.createElement('div');
+    display.innerHTML = `Grade ${grade}: ${names.join(', ')}`;
+    document.body.appendChild(display);
+  });
+  
