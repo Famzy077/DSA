@@ -146,6 +146,13 @@ const students = [
     groupedByGrade[grade].push(name);
   });
   
+  students.forEach(({name, grade}) => {
+    if(!groupedBygrade[grade]){
+        groupedByGrade[grade] = [];
+    }
+    groupedByGrade[grade].push(name);
+  })
+  
   // Display the grouped result
   Object.entries(groupedByGrade).forEach(([grade, names]) => {
     const display = document.createElement('div');
