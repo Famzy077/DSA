@@ -3,51 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Semantic Element</title>
-    <style>
-       main{
-        background-color: aqua;
-       }
-
-       h1{
-        font-size: 2rem;
-        color: gold;
-       }
-    </style>
+    <title>Media</title>
 </head>
 <body>
-    <h1>hello world</h1>
-    <h2>I love coding</h2>
-
-
-    <script>
-        const reverseStr = (str) => [...str].reduce((rev, char) => char + rev, '');
-        console.log(reverseStr('Aremu'));
-
-       const addSet = new Set();
-       addSet.add('Aremu');
-       addSet.add('Akinola');
-       addSet.add('Olaonipekun');
-       addSet.add('Festus');
-       console.log(addSet)
-
-       let subject = {};
-       subject['Physics'] = '100L'
-       subject['Biology'] = '200L'
-       subject['Maths'] = '300L'
-       subject['Chemistry'] = '400L'
-       console.log(subject)
-
-       let subjectKey = Object.keys(subject);
-       console.log(subjectKey)
-       for(let AllsubjectKey of subjectKey){
-        console.table(AllsubjectKey)
-        let display = document.createElement('div');
-        display.innerText = AllsubjectKey;
-        document.body.append(display)
-       }
-
-       
-    </script>
+    <div>
+        <img src="" alt="">
+    </div>
 </body>
 </html>
