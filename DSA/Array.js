@@ -8,13 +8,13 @@ for(let e in indexs){
 }
 console.log('Lowest value: ' + minIndex);
 
-let checkLowest = [10, 13, 5, 19, 2, 7, 3];
-let minValue = checkLowest[0];
+// let checkLowest = [10, 13, 5, 19, 2, 7, 3];
+// let minValue = checkLowest[0];
 
-for (let e of checkLowest) {
-  if (e < minValue) {
-    minValue = e;
-  }
-}
+// for (let e in checkLowest) {
+//   if (e < minValue) {
+//     minValue = e;
+//   }
+// }
 
-console.log('Lowest value: ' + minValue);
+// console.log('Lowest value: ' + minValue);

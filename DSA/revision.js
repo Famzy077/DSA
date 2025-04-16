@@ -52,14 +52,27 @@ const revision = () => {
 
     const result = sortData.map(value => reverseMap[value] || value);
     console.log(result);
+
+    const students = [
+        { name: "Femi", grade: "A" },
+        { name: "Ada", grade: "B" },
+        { name: "Uche", grade: "A" },
+        { name: "Kemi", grade: "C" },
+        { name: "Tolu", grade: "B" },
+    ];
     
+    const groudGrade = {};
+    students.forEach(({name, grade}) => {
+        if(!groudGrade[grade]){
+            groudGrade[grade] = [];
+        }
+        groudGrade[grade].push(name)
+    })
+    console.log(groudGrade )
 }
 revision()
 
 // Extract only numbers from an array and sort them in ascending order
 const data = [3, "hello", 9, "world", 1, "42", 5];
-
-const result = data.filter(item => typeof item === "number")  // Step 1: keep only numbers
-  .sort((a, b) => a - b);                    // Step 2: sort in ascending order
-
-console.log(result);  // Output: [1, 3, 5, 9]
+const result = data.filter(items => typeof items === 'number' ).sort((a, b) => a - b);
+console.log(result);
