@@ -38,4 +38,49 @@ const task = () => {
     })
     console.log(groupStudent)
 }
-task()
+// task()
+
+
+const card = ['King', 'Queen', 8, 6, 2, 9, 3, 'Femi', 'John'];
+
+const rankCard = {
+  'King': 11,
+  'Queen': 21,
+  'Femi': 13,
+  'John': 31
+};
+
+
+// Separate string and number values
+// const strings = card.filter(c => typeof c === 'string').map(c => rankCard[c]);
+// const numbers = card.filter(c => typeof c === 'number');
+
+// Sort both groups
+// const sortedStrings = strings.sort((a, b) => a - b);
+// const sortedNumbers = numbers.sort((a, b) => a - b);
+
+// Merge and map back to final values
+// const result = [...sortedStrings, ...sortedNumbers].map(val => reverse[val] || val);
+// console.log(result);
+
+// sort both groups
+
+// seperate string and number values, and sort both
+const sepString = card.filter(car => typeof car === 'string').map(car => rankCard[car]).sort((a, b) => a - b);
+const sepNumber = card.filter(car => typeof car === 'number').sort((a, b) => a - b);
+
+const reverse = {
+    11: 'King',
+    21: 'Queen',
+    13: 'Femi',
+    31: 'John'
+  };
+
+//   merge and map back to final values
+const solution = [...sepString, ...sepNumber].map(vaL => reverse[vaL] || vaL);
+console.log(solution)
+
+
+const onlyString =  ['Femi', 'Aremu', 3, 6, 8, 12, 6, 'John', 'Olaonipekun'];
+const convertString = onlyString.filter(onlyStr => typeof onlyStr === 'string').sort((a, b) => a - b);
+console.log(convertString)
